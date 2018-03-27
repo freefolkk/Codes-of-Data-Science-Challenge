@@ -3,7 +3,8 @@ import csv
 
 def fetch_ratings():
 	#fetching the gender dataset
-	filepath = open("C://Users/IBM_ADMIN/Downloads/libimseti/gender.dat")
+	#add your own path
+	filepath = open("C://Users/Downloads/libimseti/gender.dat")
 	csvReader = csv.reader(filepath)
 
 	genderList = []
@@ -15,7 +16,7 @@ def fetch_ratings():
 
 
 	#fetching the ratings dataset
-	filepath = open("C://Users/IBM_ADMIN/Downloads/libimseti/ratings.dat")
+	filepath = open("C://Users/Downloads/libimseti/ratings.dat")
 	csvReader = csv.reader(filepath)
 
 
