@@ -24,7 +24,7 @@ X = [[181, 80, 44], [177, 70, 43], [160, 60, 38], [154, 54, 37], [166, 65, 40],
 Y = ['male', 'male', 'female', 'female', 'male', 'male', 'female', 'female',
      'female', 'male', 'male']
 
-#training of classifiers on our data
+#training of classifiers on our data1
 treeClf = treeClf.fit(X,Y)
 nlpClf = nlpClf.fit(X,Y)
 knnClf = knnClf.fit(X,Y)
