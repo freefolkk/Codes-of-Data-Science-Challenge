@@ -1,5 +1,6 @@
 from sklearn import tree
 from sklearn.svm import SVC
+from sklearn.neighbors import KNeighborsClassifier
 from sklearn.gaussian_process import GaussianProcessClassifier
 from sklearn.neural_network import MLPClassifier
 from sklearn.naive_bayes import GaussianNB
@@ -8,6 +9,7 @@ from sklearn.metrics import accuracy_score
 #classifiers
 treeClf = tree.DecisionTreeClassifier()
 svmClf = SVC()
+knnClf = KNeighborsClassifier()
 gaussClf = GaussianProcessClassifier()
 nlpClf = MLPClassifier()
 naiveClf = GaussianNB()
@@ -25,6 +27,7 @@ Y = ['male', 'male', 'female', 'female', 'male', 'male', 'female', 'female',
 #training of classifiers on our data
 treeClf = treeClf.fit(X,Y)
 nlpClf = nlpClf.fit(X,Y)
+knnClf = knnClf.fit(X,Y)
 gaussClf = gaussClf.fit(X,Y)
 svmClf = svmClf.fit(X,Y)
 naiveClf = naiveClf.fit(X,Y)
@@ -40,6 +43,7 @@ prediction2 = nlpClf.predict(_X)
 prediction3 = gaussClf.predict(_X)
 prediction4 = svmClf.predict(_X)
 prediction5 = naiveClf.predict(_X)
+prediction6 = knnClf.predict(_X)
 
 #accuracy
 accuracy1 = accuracy_score(_Y,prediction1)
@@ -47,7 +51,7 @@ accuracy2 = accuracy_score(_Y,prediction2)
 accuracy3 = accuracy_score(_Y,prediction3)
 accuracy4 = accuracy_score(_Y,prediction4)
 accuracy5 = accuracy_score(_Y,prediction5)
-
+accuracy6 = accuracy_score(_Y,prediction6)
 
 #compare their results and print the best one!
 print(prediction1)
@@ -55,10 +59,11 @@ print(prediction2)
 print(prediction3)
 print(prediction4)
 print(prediction5)
+print(prediction6)
 
 print(accuracy1)
 print(accuracy2)
 print(accuracy3)
 print(accuracy4)
 print(accuracy5)
-
+print(accuracy6)
